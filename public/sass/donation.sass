@@ -1,0 +1,51 @@
+@import "./variables.sass"
+@import "./fonts.sass"
+
+.ps-donation-html
+  width: 100%
+  height: 100%
+
+.ps-donation-body
+  width: 100%
+  // display: flex
+  background-color: $light-black
+
+@media (min-width: 1100px)
+  .container
+    width: 1100px !important
+    max-width: 1100px !important
+
+.ps-donation
+  color: $paper !important
+  .ps-donation-logo
+    width: 300px
+    height: auto
+    @media (max-width: $tablet)
+      width: 200px
+  .ps-content-container
+    padding: 0 40px 40px 40px
+    .title
+      color: $paper !important
+      &:not(:last-child)
+        margin-bottom: 1rem
+    p
+      font-size: 1.1rem
+  .ps-donation-text-margin
+    margin-top: 1rem !important
+    margin-bottom: 1rem !important
+    .ps-crypto-donation
+      transition: all ease-in-out $transition
+      display: flex
+      justify-content: center
+      text-align: center
+      border: thin solid #fafafa
+      align-self: center
+      border-radius: 4px
+      margin: 15px
+      cursor: pointer
+      height: 66px
+      &:hover
+        border-color: $yellow
+      img
+        height: max-content
+        align-self: center

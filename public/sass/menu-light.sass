@@ -1,0 +1,105 @@
+.ps-menu-light
+  color: $paper
+  font-weight: 600
+  line-height: 80px
+  margin: 0 2.5em
+  padding-bottom: 80px
+  @media (max-width: 770px)
+    display: flex
+    justify-content: space-between
+    padding-bottom: 0
+  ul
+    list-style-type: none
+    text-align: center
+    @media (max-width: 770px)
+      display: none
+    li
+      display: inline-block
+      &:nth-child(1)
+        @media(max-width: 1000px)
+          display: block
+      &.ps-pulled-left-logo
+        float: left
+        height: 80px
+        @media(max-width: 1000px)
+          float: none
+      &.ps-pulled-right
+        float: right
+        @media(max-width: 1000px)
+          float: none
+      a
+        text-decoration: none
+        color: $paper
+        font-size: 16px
+        font-weight: bold
+        padding: 0 20px
+        transition: all ease-in-out $transition
+        &:hover
+          color: $yellow
+        &.ps-active-link
+          border-bottom: solid 3px
+          pointer-events: none
+          padding-bottom: 8px
+        .ps-logo
+          width: 12rem
+          height: auto
+          margin-top: 10px
+  .ps-logo-mobile
+    width: 12rem
+    height: auto
+    @media(min-width: 771px)
+      display: none
+  .ps-burger-menu-icon
+    cursor: pointer
+    display: inline-block
+    z-index: 3
+    @media(min-width: 771px)
+      display: none
+    div
+      width: 35px
+      height: 3px
+      background-color: $paper
+      margin: 6px 0
+      transition: 0.4s
+  .ps-burger-icon-active
+    &.ps-burger-menu-line1
+      -webkit-transform: rotate(-45deg) translate(-9px, 5px)
+      transform: rotate(-45deg) translate(-9px, 5px)
+    &.ps-burger-menu-line2
+      opacity: 0
+    &.ps-burger-menu-line3
+      -webkit-transform: rotate(45deg) translate(-8px, -5px)
+      transform: rotate(45deg) translate(-8px, -5px)
+  .ps-burger-menu-links
+    position: absolute
+    display: block
+    width: 100%
+    background-color: $ink
+    height: 0px
+    transition: all 0.3s ease-in
+    overflow: hidden
+    top: 0px
+    left: 0px
+    z-index: 2
+    a
+      top: 0px
+      color: $paper
+      display: block
+      width: auto
+      text-align: center
+      margin: 0 auto
+      transition: color ease-in-out $transition
+      &.ps-active-link
+        border-bottom: solid 3px
+        width: 90px
+        height: 60px
+        pointer-events: none
+        padding-bottom: 8px
+
+      &:nth-child(1)
+        margin-top: 80px
+      &:hover
+        color: $yellow
+    &.ps-burger-menu-active
+      height: 100%
+      overflow-y: auto

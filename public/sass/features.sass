@@ -1,0 +1,148 @@
+@import "./variables.sass"
+@import "./fonts.sass"
+
+html
+  scroll-behavior: smooth
+
+.ps-no-scroll
+  overflow: hidden
+
+@media(min-width: 1100px)
+  .container
+    width: 1100px !important
+    max-width: 1100px !important
+
+.ps-inner-section-title
+  font-size: 1.7rem !important
+  margin-top: 2rem !important
+
+.ps-light-purple
+  color: lighten($purple, 20%) !important
+
+.ps-feature-header-section
+  background-color: $pink !important
+  color: $light-black !important
+  .container
+    padding-bottom: 3rem
+    .ps-feature-header-text
+      padding-right: 6rem
+      padding-left: 6rem
+      padding-bottom: 6rem
+      font-size: 1.15rem
+      color: $light-black !important
+      @media (max-width: 600px)
+        padding-right: 0
+        padding-left: 0
+      .title
+        color: $light-black !important
+        margin-bottom: 2rem
+    .ps-feature-video-container
+      width: 100%
+      height: 0
+      padding-bottom: 56.25%
+      position: relative
+      iframe
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+
+.ps-gap-section
+  background-color: $light-black !important
+  a
+    color: $yellow
+    transition: all ease-in-out $transition
+    &:hover
+      color: lighten($yellow, 20)
+  .ps-more-feature
+    padding-top: 2rem
+    color: $paper !important
+    text-align: center
+    font-size: 2rem
+  .ps-more-feature-title
+    color: $paper !important
+    text-align: center
+  .ps-more-feature-hr
+    margin-left: auto
+    margin-right: auto
+    background-color: $yellow
+    width: 225px
+  .ps-more-feature-img
+    display: block
+    margin-left: auto
+    margin-right: auto
+    width: 700px
+    height: auto
+
+
+
+.ps-features-section
+  background-color: $light-grey
+  color: $light-black !important
+  .container
+    margin-top: 2rem
+    @media(max-width: 850px)
+      .ps-feature-mobile-size
+        display: block
+      .ps-feature-desktop-size
+        display: none
+
+    @media(min-width: 850px)
+      .ps-feature-mobile-size
+        display: none
+      .ps-feature-desktop-size
+        display: block
+    hr
+      width: 250px
+      &.ps-hr-orange
+        background-color: $orange !important
+        @media(max-width: 850px)
+          margin-left: auto
+          margin-right: auto
+      &.ps-hr-pink
+        background-color: $pink !important
+        @media(max-width: 850px)
+          margin-left: auto
+          margin-right: auto
+      &.ps-hr-blue
+        background-color: $light-blue !important
+        @media(max-width: 850px)
+          margin-left: auto
+          margin-right: auto
+    p
+      font-size: 1.2rem
+    .ps-feature-images-container
+      padding-bottom: 5rem
+      &.ps-feature-image-is-right
+        padding-left: 3rem
+      &.ps-feature-image-is-left
+        padding-right: 3rem
+      .ps-features-images
+        width: 500px
+        height: auto
+        border-radius: 8px
+
+.ps-features-title
+  font-weight: 500
+  color: $light-black !important
+  &:not(:last-child)
+    margin-bottom: 1rem
+  &.ps-title-orange
+    color: $orange !important
+  &.ps-title-pink
+    color: $pink !important
+  &.ps-title-blue
+    color: $light-blue !important
+
+
+
+pre
+  white-space: pre-line !important
+
+@import "../../node_modules/bulma/sass/utilities/all.sass"
+@import "../../node_modules/bulma/sass/base/all.sass"
+@import "../../node_modules/bulma/sass/layout/all.sass"
+@import "../../node_modules/bulma/sass/grid/columns.sass"
+@import "../../node_modules/bulma/sass/elements/all.sass"
+@import "../fonts/fontello/css/fontello.css"

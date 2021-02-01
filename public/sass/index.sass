@@ -1,0 +1,655 @@
+@import "./variables.sass"
+@import "./fonts.sass"
+
+html
+  scroll-behavior: smooth
+
+.ps-no-scroll
+  overflow: hidden
+
+.ps-payment-address
+  word-wrap: break-word
+
+@media(min-width: 1100px)
+  .container
+    width: 1100px !important
+    max-width: 1100px !important
+
+.ps-section-title
+  font-size: 1.7rem !important
+  margin-top: 2rem !important
+
+.ps-light-purple
+  color: lighten($purple, 20%) !important
+
+.ps-header-section
+  background-color: $purple
+  color: $paper !important
+  .ps-menu
+    line-height: 80px
+    margin: 0 2.5em
+    @media (max-width: 780px)
+      display: flex
+      justify-content: flex-end
+    ul
+      list-style-type: none
+      @media (max-width: 780px)
+        display: none
+      li
+        display: inline-block
+        a
+          text-decoration: none
+          color: $paper
+          font-size: 16px
+          font-weight: bold
+          padding: 0 20px
+          transition: all ease-in-out $transition
+          &:hover
+            color: $yellow
+        &:last-child
+          float: right
+    .ps-burger-menu-icon
+      cursor: pointer
+      display: inline-block
+      z-index: 3
+      @media(min-width: 781px)
+        display: none
+      div
+        width: 35px
+        height: 3px
+        background-color: $paper
+        margin: 6px 0
+        transition: 0.4s
+    .ps-burger-icon-active
+      &.ps-burger-menu-line1
+        -webkit-transform: rotate(-45deg) translate(-9px, 5px)
+        transform: rotate(-45deg) translate(-9px, 5px)
+      &.ps-burger-menu-line2
+        opacity: 0
+      &.ps-burger-menu-line3
+        -webkit-transform: rotate(45deg) translate(-8px, -5px)
+        transform: rotate(45deg) translate(-8px, -5px)
+    .ps-burger-menu-links
+      position: absolute
+      display: block
+      width: 100%
+      background-color: $ink
+      height: 0px
+      transition: all 0.3s ease-in
+      overflow: hidden
+      top: 0px
+      left: 0px
+      z-index: 2
+      a
+        font-weight: 600
+        top: 0px
+        color: $paper
+        display: block
+        width: auto
+        text-align: center
+        margin: 0 auto
+        transition: color ease-in-out $transition
+        &:nth-child(1)
+          margin-top: 80px
+        &:hover
+          color: $yellow
+      &.ps-burger-menu-active
+        height: 100%
+        overflow-y: auto
+  .container
+    padding-bottom: 3rem
+    .ps-header-logo-img
+      margin: 0 auto
+      margin-bottom: 1rem
+      img
+        width: 184px
+        height: auto
+    .ps-header-text
+      padding-right: 6rem
+      padding-left: 6rem
+      padding-bottom: 6rem
+      font-size: 1.15rem
+      @media (max-width: 600px)
+        padding-right: 0
+        padding-left: 0
+      .title
+        color: $yellow !important
+        &:not(:last-child)
+          margin-bottom: 1rem
+      .ps-header-hr
+        height: 1px
+        border: none
+        width: 60px
+        margin-left: calc(50% - 30px)
+        background-color: $yellow !important
+    .ps-version
+      color: $light-grey !important
+      font-size: 20px
+    .ps-header-links-container
+      padding-right: 8rem
+      padding-left: 8rem
+      @media (max-width: 620px)
+        padding-right: 0
+        padding-left: 0
+      .ps-links-image
+        width: 55px
+        height: 55px
+        margin-left: auto
+        margin-right: auto
+        margin-bottom: 40px
+      .ps-linux-download-parent
+        position: relative
+        .ps-linux-links-container
+          width: 100%
+          opacity: 1
+          background-color: $paper
+          position: absolute
+          z-index: 9999999
+          box-shadow: #333 0px 0px 30px
+          border-radius: 4px
+          left: 0
+          display: block
+          color: #333
+          overflow: hidden
+          transition: all ease-in-out $transition
+          .ps-linux-links
+            display: block
+            padding: 10px
+            transition: all ease-in-out $transition
+            color: $ink
+            &:hover
+              background-color: $light-grey
+          &.ps-hidden-content
+            display: none
+          &.ps-hidden
+            opacity: 0
+      .ps-android-download-parent
+        position: relative
+        .ps-android-links-container
+          width: 100%
+          opacity: 1
+          background-color: $paper
+          position: absolute
+          z-index: 9999999
+          box-shadow: #333 0px 0px 30px
+          border-radius: 4px
+          left: 0
+          display: block
+          color: #333
+          overflow: hidden
+          transition: all ease-in-out $transition
+          .ps-android-links
+            display: block
+            padding: 10px
+            transition: all ease-in-out $transition
+            color: $ink
+            &:hover
+              background-color: $light-grey
+          &.ps-hidden-content
+            display: none
+          &.ps-hidden
+            opacity: 0
+
+      .ps-links
+        width: 140px
+        height: 50px
+        margin-right: auto
+        margin-left: auto
+        background-color: transparent !important
+        color: $paper !important
+        transition: all ease-in-out $transition
+        &.ps-outlined-blue-btn
+          border-color: $blue !important
+          &:hover
+            background-color: $blue !important
+            color: $ink !important
+        &.ps-outlined-yellow-btn
+          border-color: $vivid-yellow !important
+          &:hover
+            background-color: $vivid-yellow !important
+            color: $ink !important
+        &.ps-outlined-orange-btn
+          border-color: $orange !important
+          &:hover
+            background-color: $orange !important
+        &.ps-outlined-green-btn
+          border-color: $green !important
+          &:hover
+            background-color: $green !important
+            color: $ink !important
+        &.ps-outlined-pink-btn
+          border-color: $pink !important
+          &:hover
+            background-color: $pink !important
+
+.ps-feature-section
+  background-color: $yellow
+  padding: 0 !important
+  position: relative
+  .ps-feature-overlay
+    width: 100%
+    height: 100%
+    background: url(../img/backgounds/Patt1.svg) repeat
+    background-size: 400px 400px
+    position: absolute
+    top: 0
+    opacity: 0.025
+  .container
+    padding-top: 3rem !important
+    padding-bottom: 3rem !important
+    .ps-feature-header-icon
+      font-size: 4.5rem
+      color: $purple
+      margin-bottom: 3rem
+      margin-top: 4.5rem
+      .ps-offline-feature-icon
+        font-size: 3.5rem
+        margin-left: -10px
+      .ps-simple-feature-icon
+        font-size: 3.5rem
+    .ps-feature-header-title
+      font-size: 1.1rem !important
+      color: $purple
+    .ps-feature-title
+      .title
+        color: $purple !important
+        &:not(:last-child)
+          margin-bottom: 1rem
+      .ps-feature-hr
+        height: 1px
+        border: none
+        width: 60px
+        margin-left: calc(50% - 30px)
+        background-color: lighten($purple, 20%) !important
+        margin-bottom: 1rem
+        margin-top: 1rem
+    .columns
+      margin-bottom: 2rem
+    p
+      font-size: 1.1rem
+      a
+        transition: all ease-in-out $transition
+        color: lighten($purple, 20%)
+        &:hover
+          color: $purple
+
+.ps-donation-section
+  background-color: $light-black
+  color: $paper !important
+  .container
+    margin-top: 2rem
+    .ps-donation-logo
+      width: 300px
+      height: auto
+      @media (max-width: $tablet)
+        width: 200px
+    .ps-content-container
+      padding: 0 40px 40px 40px
+      .title
+        color: $paper !important
+        &:not(:last-child)
+          margin-bottom: 1rem
+      p
+        font-size: 1.1rem
+    .ps-donation-text-margin
+      margin-top: 1rem !important
+      margin-bottom: 1rem !important
+      .ps-crypto-donation
+        transition: all ease-in-out $transition
+        display: flex
+        justify-content: center
+        text-align: center
+        border: thin solid #fafafa
+        align-self: center
+        border-radius: 4px
+        margin: 15px
+        cursor: pointer
+        height: 66px
+        &:hover
+          border-color: $yellow
+        img
+          height: max-content
+          align-self: center
+    p
+      font-size: 1.1rem
+
+.ps-story-section
+  background-color: $light-salmon
+  color: $paper !important
+  .container
+    margin-top: 2rem
+    .ps-story-logo
+      width: 235px
+      height: auto
+    .title
+      color: $paper !important
+      &:not(:last-child)
+        margin-bottom: 1rem
+    .ps-story-text-margin
+      margin-bottom: 2.5rem !important
+      @media(max-width: $tablet)
+        margin-bottom: 1rem !important
+    p
+      font-size: 1.1rem
+
+.ps-team-section
+  background-color: $light-grey
+  .ps-team-members-container
+    padding-left: 3rem !important
+    padding-right: 3rem !important
+    @media (max-width: 900px)
+      padding-right: 0 !important
+      padding-left: 0 !important
+    .ps-team-title
+      margin-bottom: 2.5rem
+      .title
+        color: $purple
+        &:not(:last-child)
+          margin-bottom: 0.75rem
+      p
+        color: $purple
+    .ps-team-images-container
+      .ps-team-members-image
+        width: 250px
+        height: 250px
+        margin-left: auto
+        margin-right: auto
+        margin-bottom: 20px
+        @media (max-width: 1044px)
+          width: 150px
+          height: 150px
+          margin-bottom: 30px
+        @media (max-width: 699px) and (min-width: 500px)
+          width: 90px
+          height: 90px
+          margin-bottom: 30px
+      .ps-team-member-text
+        color: $purple !important
+        strong
+          color: $purple !important
+
+.ps-download-links-section
+  background-color: $purple
+  padding: 0 !important
+  position: relative
+  .ps-feature-overlay
+    width: 100%
+    height: 100%
+    background: url(../img/backgounds/Patt1.svg)
+    background-size: 400px 400px
+    position: absolute
+    top: 0
+    opacity: 0.03
+  .container
+    padding: 6rem 7rem !important
+    @media (max-width: 700px)
+      padding-right: 0 !important
+      padding-left: 0 !important
+    .ps-download-links-title
+      margin-bottom: 5rem
+    .title
+      color: $light-grey
+      &:not(:last-child)
+        margin-bottom: 0.75rem
+    .ps-version
+      color: $light-grey !important
+      font-size: 20px
+    .ps-download-links-container
+      padding-right: 2.5rem
+      padding-left: 2.5rem
+      @media (max-width: 620px)
+        padding-right: 0
+        padding-left: 0
+      .ps-linux-download-parent
+        position: relative
+        .ps-linux-links-container
+          width: 100%
+          opacity: 1
+          background-color: $paper
+          position: absolute
+          z-index: 9999999
+          box-shadow: #333 0px 0px 30px
+          border-radius: 4px
+          left: 0
+          display: block
+          color: #333
+          overflow: hidden
+          transition: all ease-in-out $transition
+          .ps-linux-links
+            display: block
+            padding: 10px
+            transition: all ease-in-out $transition
+            color: $ink
+            &:hover
+              background-color: $light-grey
+          &.ps-hidden
+            opacity: 0
+          &.ps-hidden-content
+            display: none
+      .ps-android-download-parent
+        position: relative
+        .ps-android-links-container
+          width: 100%
+          opacity: 1
+          background-color: $paper
+          position: absolute
+          z-index: 9999999
+          box-shadow: #333 0px 0px 30px
+          border-radius: 4px
+          left: 0
+          display: block
+          color: #333
+          overflow: hidden
+          transition: all ease-in-out $transition
+          .ps-android-links
+            display: block
+            padding: 10px
+            transition: all ease-in-out $transition
+            color: $ink
+            &:hover
+              background-color: $light-grey
+          &.ps-hidden-content
+            display: none
+          &.ps-hidden
+            opacity: 0
+      .ps-links-image
+        width: 55px
+        height: 55px
+        margin-left: auto
+        margin-right: auto
+        margin-bottom: 40px
+      .ps-links
+        width: 140px
+        height: 50px
+        margin-right: auto
+        margin-left: auto
+        background-color: transparent !important
+        color: $paper !important
+        border-color: $light-grey !important
+        transition: all ease-in-out $transition
+        &:hover
+          background-color: $light-grey !important
+          color: $ink !important
+
+.ps-footer-section
+  background-color: $ink
+  .container
+    min-height: 250px !important
+    color: $paper !important
+    @media(max-width: $tablet)
+      min-height: 150px !important
+      padding-top: 1.5rem !important
+    @media(max-width: 600px)
+      .ps-footer
+        font-size: 0.75rem
+        .field
+          .control
+            font-size: 0.75rem
+    .ps-idpay-donation-link
+      transition: all ease-in-out $transition
+      color: $light-grey !important
+      &:hover
+        color: $yellow !important
+    .ps-footer-title
+      margin-bottom: 1rem
+      font-size: 1.1rem
+    .ps-footer-social-container
+      margin-bottom: 3rem
+      .ps-footer-social-links
+        font-size: 24px
+        width: 48px
+        height: 48px
+        border-radius: 100%
+        background-color: $light-grey
+        color: $ink
+        margin: 0.25rem
+        transition: all ease-in-out $transition
+        &:hover
+          &.ps-footer-social-facebook
+            background-color: $facebook
+          &.ps-footer-social-twitter
+            background-color: $twitter
+          &.ps-footer-social-github
+            background-color: $github
+            color: $light-grey
+          &.ps-footer-social-instagram
+            background-color: $instagram
+          &.ps-footer-social-reddit
+            background-color: $reddit
+            color: $light-grey
+  .ps-footer
+    width: 100%
+    color: $light-grey !important
+    .ps-menu
+      line-height: 80px
+      margin: 0 2.5em
+      ul
+        list-style-type: none
+        text-align: center
+        li
+          display: inline-block
+          @media (max-width: 470px)
+            display: block
+          a
+            text-decoration: none
+            color: $paper
+            font-size: 16px
+            font-weight: bold
+            padding: 0 20px
+            transition: all ease-in-out $transition
+            &:hover
+              color: $yellow
+            &.active
+              pointer-events: none
+              border-bottom: solid 3px
+              padding-bottom: 8px
+    .ps-copyright
+      padding-top: 36px
+      a
+        color: $light-grey !important
+        transition: all ease-in-out $transition
+        &:hover
+          color: $yellow !important
+
+    .control
+      a
+        color: $light-grey !important
+        &:hover
+          color: $yellow !important
+  .ps-is-pulled-left
+    float: left !important
+    @media(max-width: $tablet)
+      float: none !important
+      justify-content: center !important
+  .ps-is-pulled-right
+    float: right !important
+    @media(max-width: $tablet)
+      float: none !important
+
+.ps-sub-footers-section
+  background-color: $ink
+  padding-top: 1.5rem !important
+  padding-bottom: 1rem !important
+  .container
+    min-height: 180px !important
+    padding-top: 2rem !important
+    color: $paper !important
+    @media(max-width: 600px)
+      .ps-footer
+        font-size: 0.75rem
+        .field
+          .control
+            font-size: 0.75rem
+    .title
+      color: $light-grey !important
+    .ps-footer-title
+      padding-bottom: 0.5rem
+    .ps-footer-social-links
+      font-size: 16px
+      width: 28px
+      height: 28px
+      border-radius: 100%
+      background-color: $light-grey
+      color: $ink
+      margin: 0.25rem
+      transition: all ease-in-out $transition
+      &:hover
+        &.ps-footer-social-facebook
+          background-color: $facebook
+        &.ps-footer-social-twitter
+          background-color: $twitter
+        &.ps-footer-social-github
+          background-color: $github
+          color: $light-grey
+        &.ps-footer-social-instagram
+          background-color: $instagram
+        &.ps-footer-social-reddit
+          background-color: $reddit
+          color: $light-grey
+  .ps-footer
+    width: 100%
+    position: absolute
+    bottom: 0
+    color: $light-grey !important
+    .control
+      a
+        color: $light-grey !important
+        &:hover
+          color: $yellow !important
+  .ps-is-pulled-left
+    float: left !important
+    @media(max-width: $tablet)
+      float: none !important
+      justify-content: center !important
+  .ps-is-pulled-right
+    float: right !important
+    @media(max-width: $tablet)
+      float: none !important
+  .ps-footer-links
+    transition: all ease-in-out $transition
+
+/***************** General **************/
+.ps-links-landing
+  transition: all ease-in-out $transition
+  color: lighten($purple, 20%)
+  &:hover
+    color: $purple
+
+pre
+  white-space: pre-line !important
+
+@import "./404.sass"
+@import "./features.sass"
+@import "./donation.sass"
+@import "./contact-us.sass"
+@import "./help.sass"
+@import "./menu-dark.sass"
+@import "./menu-light.sass"
+
+@import "../../node_modules/bulma/sass/utilities/all.sass"
+@import "../../node_modules/bulma/sass/base/all.sass"
+@import "../../node_modules/bulma/sass/layout/all.sass"
+@import "../../node_modules/bulma/sass/grid/columns.sass"
+@import "../../node_modules/bulma/sass/elements/all.sass"
+@import "../../node_modules/bulma/sass/components/modal.sass"
+@import "../fonts/fontello/css/fontello.css"

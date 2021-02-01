@@ -1,0 +1,41 @@
+.ps-help
+    color: $ink
+    .ps-help-titles-container
+        a
+            color: $purple
+            font-size: 16px
+            font-weight: bold
+            transition: all ease-in-out $transition
+            &:hover
+                color: $yellow
+    .ps-help-content
+        padding-top: 3rem
+        h3
+            padding-top: 2rem
+        pre
+            word-wrap: break-word
+.container
+    padding-bottom: 3rem
+    .ps-feature-header-text
+      padding-right: 6rem
+      padding-left: 6rem
+      padding-bottom: 6rem
+      font-size: 1.15rem
+      color: $light-black !important
+      @media (max-width: 600px)
+        padding-right: 0
+        padding-left: 0
+      .title
+        color: $light-black !important
+        margin-bottom: 2rem
+    .ps-feature-video-container
+      width: 100%
+      height: 0
+      padding-bottom: 56.25%
+      position: relative
+      iframe
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0

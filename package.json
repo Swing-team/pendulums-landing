@@ -1,0 +1,36 @@
+{
+  "name": "pendulums-landing-page",
+  "version": "1.0.1",
+  "description": "The Pendulums landing page project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "develop": "gulp --debug",
+    "build": "gulp build",
+    "production": "gulp"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bulma": "^0.6.1",
+    "qrcode": "^1.4.1",
+    "umbrellajs": "^3.1.0"
+  },
+  "devDependencies": {
+    "browserify": "^16.5.0",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-browserify": "^0.5.1",
+    "gulp-connect": "^5.7.0",
+    "gulp-if": "^3.0.0",
+    "gulp-jshint": "^2.1.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify-es": "^1.0.4",
+    "gulp-util": "^3.0.8",
+    "jshint": "^2.10.2",
+    "node-sass": "^4.12.0",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  }
+}
